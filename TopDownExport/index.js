@@ -14301,7 +14301,7 @@ const Engine = (function () {
 	Engine.load = function (basePath, size) {
 		if (loadPromise == null) {
 			loadPath = basePath;
-			loadPromise = preloader.loadPromise(`https://aladvs.github.io/Godot-Github-Pages-Test/index.wasm`, size, true);
+			loadPromise = preloader.loadPromise(`${loadPath}.wasm`, size, true);
 			requestAnimationFrame(preloader.animateProgress);
 		}
 		return loadPromise;
